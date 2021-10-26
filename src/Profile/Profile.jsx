@@ -7,7 +7,7 @@ const Profile = () => {
             <div>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKHEZ8jN4MlDEwzxSXGnYU7shtaCjbeMf6Ow&usqp=CAU" alt="img" />
             </div>
-            <div>
+            <div className={s.avaDisc}>
                 Ava + Description
             </div>
             <MyPosts />

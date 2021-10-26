@@ -3,7 +3,7 @@ import s from './Navbar.module.css';
 const Navbar = () => {
     return (
         <div className={s.Navbar}>
-            <div className={s.item}>
+            <div className={`${s.item} ${s.active}`}>
                 <a href="">Profile</a>
             </div>
             <div className={s.item}>

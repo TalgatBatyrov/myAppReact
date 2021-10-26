@@ -13,7 +13,11 @@
     text-decoration: none;
     color: white;
 }
+
+.Navbar .active a {
+    color: gold;
+}
+
 .Navbar a:hover {
     color: green;
 }
-

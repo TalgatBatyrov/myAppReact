@@ -1,12 +1,10 @@
 .Profile {
     grid-area: p;
     background-color: turquoise;
-    padding: 10px;
     border-radius: 10px;
 }
 
-.Profile img {
-    width: 100%;
-    height: 200px;
-}
 
+.avaDisc {
+    padding: 20px;
+}
