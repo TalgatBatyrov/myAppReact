@@ -1,0 +1,10 @@
+.Header {
+    padding: 10px;
+    grid-area: h;
+    background-color: teal;
+    border-radius: 10px;
+}
+
+.Header img {
+    width: 40px;
+}
