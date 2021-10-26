@@ -9,10 +9,11 @@
     margin-top: 40px;
 }
 
-.Navbar a {
+.Navbar .item a  {
     text-decoration: none;
     color: white;
 }
 .Navbar a:hover {
     color: green;
 }
+

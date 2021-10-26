@@ -3,19 +3,19 @@ import s from './Navbar.module.css';
 const Navbar = () => {
     return (
         <div className={s.Navbar}>
-            <div>
+            <div className={s.item}>
                 <a href="">Profile</a>
             </div>
-            <div>
+            <div className={s.item}>
                 <a href="">Message</a>
             </div>
-            <div>
+            <div className={s.item}>
                 <a href="">News</a>
             </div>
-            <div>
+            <div className={s.item}>
                 <a href="">Music</a>
             </div>
-            <div>
+            <div className={s.item}>
                 <a href="">Setting</a>
             </div>
         </div>
