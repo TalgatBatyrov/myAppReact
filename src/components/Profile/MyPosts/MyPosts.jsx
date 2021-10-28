@@ -3,7 +3,7 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
 
-    let postElement = props.posts.map((post) => <Post message={post.message} likesCount={post.likesCount} />)
+    let postElement = props.posts.posts.map((post) => <Post message={post.message} likesCount={post.likesCount} />)
 
     return (
         <div className={s.postBlock}>
