@@ -8,14 +8,13 @@ const Dialogs = (props) => {
     let dialogsElements = props.state.dialogs.map((dialog) => <DialogItem name={dialog.name} id={dialog.id} />);
     let messagesElements = props.state.messages.map((message) => <Message message={message.message} />);
 
-    let newMessageElement = React.createRef();
 
     let addMessage = () => {
         props.dispatch(addMessageActionCreator())
     }
 
-    let onMessageChange = () => {
-        let message = newMessageElement.current.value;
+    let onNewMessageChange = (e) => {
+        let message = e.target.value; // Вместо Ref использовал target.value
         props.dispatch(updateNewMessageTextActionCreator(message))
     }
 
@@ -25,12 +24,14 @@ const Dialogs = (props) => {
                 {dialogsElements}
             </div>
             <div className={s.messages}>
-                {messagesElements}
-                <div className={s.textareaMessages}>
-                    <textarea ref={newMessageElement} value={props.state.newMessageText} onChange={onMessageChange}></textarea>
-                </div>
-                <div className="buttonMessages">
-                    <button onClick={addMessage}>Add message</button>
+                <div>{messagesElements}</div>
+                <div>
+                    <div className={s.textareaMessages}>
+                        <textarea value={props.state.newMessageText} onChange={onNewMessageChange} placeholder='Enter your message'></textarea>
+                    </div>
+                    <div className="buttonMessages">
+                        <button onClick={addMessage}>Send message</button>
+                    </div>
                 </div>
             </div>
         </div>
