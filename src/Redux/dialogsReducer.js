@@ -20,17 +20,24 @@ let initialState = {
 
 const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_MESSAGE:
+        case ADD_MESSAGE: {
             let newMessage = {
                 message: state.newMessageText,
                 id: 4
             };
-            state.messages.push(newMessage);
-            state.newMessageText = '';
-            return state
-        case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.newMessage;
-            return state
+            return {
+                ...state,
+                newMessageText: '',
+                messages: [...state.messages, newMessage]
+            }
+            // stateCopy.messages.push(newMessage);  вместо push просто в конец после запятой вынесли newMessage
+        }
+        case UPDATE_NEW_MESSAGE_TEXT: {
+            return {
+                ...state,
+                newMessageText: action.newMessage
+            }
+        }
         default:
             return state
     }
