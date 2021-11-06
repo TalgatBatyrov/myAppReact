@@ -1,5 +1,25 @@
-.photo {
+.usersPhoto {
     width: 100px;
     height: 100px; 
     border-radius: 50% ;
+}
+
+.follow {
+    background-color: green;
+    color: #fff;
+}
+
+.unfollow {
+background-color: brown;
+color: #fff;
+}
+
+.body {
+    color: #fff;
+    padding: 10px;
+}
+
+.selectedPage {
+    font-weight: bold;
+    color: black;
 }
